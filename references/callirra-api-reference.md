@@ -17,6 +17,9 @@ Authentication: `Authorization: Bearer sk-cal-...`
 | GET | `/v1/videos/{id}/content` | Download completed video |
 | POST | `/v1/videos/{id}/cancel` | Cancel task |
 | POST | `/v1/media/references` | Upload reference media |
+| GET | `/api/v1/prompts/templates` | List Prompt Studio templates |
+| POST | `/v1/prompts/enhance` | Enhance an idea with a built-in template |
+| GET | `/api/v1/creative` | Get full curated creative knowledge base |
 
 ## Image Example
 

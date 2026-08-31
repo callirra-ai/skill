@@ -18,7 +18,8 @@
      --prompt "<enhanced prompt>" \
      --duration 10 \
      --resolution 720p \
-     --wait
+     --wait \
+     --out clip.mp4
    ```
 6. Wait for terminal status and report the job id plus output URL or error.
 7. If the task failed, report the error and suggest retry or model change.

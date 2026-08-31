@@ -76,7 +76,7 @@ def run_balance() -> None:
 def run_usage(limit: int) -> None:
     data = request(f"/v1/usage?limit={limit}")["data"]
     for row in data:
-        print(f"{row['created_at']}\t{row['model']}\t{row['category']}\t{row['cost_credits']} credits")
+        print(f"{row['created_at']}\t{row['model']}\t{row['category']}\t{row['cost_credits']} credits\t{row['status']}")
     if not data:
         print("No usage found.")
 
@@ -87,13 +87,24 @@ def run_generate_image(args: argparse.Namespace) -> None:
         body["size"] = args.size
     if args.n:
         body["n"] = args.n
+    if args.reference:
+        body["reference_images"] = [x.strip() for x in args.reference.split(",") if x.strip()]
+    if args.image_input:
+        body["image_input"] = args.image_input
     result = request("/v1/images/generations", "POST", body)
-    image = result.get("data", [{}])[0]
-    if args.out and image.get("b64_json"):
-        Path(args.out).write_bytes(base64.b64decode(image["b64_json"]))
+    images = result.get("data", [])
+    urls = [img.get("url") for img in images if img.get("url")]
+    first = images[0] if images else {}
+    if args.out and first.get("b64_json"):
+        out = Path(args.out)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_bytes(base64.b64decode(first["b64_json"]))
         print(f"Saved image to {args.out}")
-    elif image.get("url"):
-        print(image["url"])
+        for url in urls:
+            print(url)
+    elif urls:
+        for url in urls:
+            print(url)
     else:
         print(json.dumps(result, indent=2))
 
@@ -105,7 +116,9 @@ def download_video(job_id: str, out_path: str) -> None:
         headers={"Authorization": f"Bearer {api_key}"},
     )
     with urllib.request.urlopen(req, timeout=120) as res:
-        Path(out_path).write_bytes(res.read())
+        out = Path(out_path)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_bytes(res.read())
 
 
 def run_generate_video(args: argparse.Namespace) -> None:
@@ -120,17 +133,27 @@ def run_generate_video(args: argparse.Namespace) -> None:
         body["aspect_ratio"] = args.aspect
     if args.generate_audio:
         body["generate_audio"] = True
+    if args.frame_image:
+        body["frame_images"] = [x.strip() for x in args.frame_image.split(",") if x.strip()]
+    if args.input_reference:
+        body["input_references"] = [x.strip() for x in args.input_reference.split(",") if x.strip()]
     job = request("/v1/videos", "POST", body)["job"]
     print(f"Job created: {job['id']} ({job['status']})")
     if args.wait:
+        started = time.time()
         while True:
             state = request(f"/v1/videos/{job['id']}")["job"]
             if state["status"] in ("completed", "failed", "cancelled", "expired"):
                 print(json.dumps(state, indent=2))
-                if args.out and state["status"] == "completed":
-                    download_video(job["id"], args.out)
-                    print(f"Saved video to {args.out}")
+                if state["status"] == "completed":
+                    if args.out:
+                        download_video(job["id"], args.out)
+                        print(f"Saved video to {args.out}")
+                else:
+                    sys.exit(1)
                 break
+            if time.time() - started > 900:
+                raise SystemExit("Task timed out after 900s.")
             time.sleep(5)
 
 
@@ -199,6 +222,8 @@ def main() -> None:
     p.add_argument("--prompt", required=True)
     p.add_argument("--size")
     p.add_argument("--n", type=int)
+    p.add_argument("--reference")
+    p.add_argument("--image-input")
     p.add_argument("--out")
     p.set_defaults(func=run_generate_image)
 
@@ -208,8 +233,10 @@ def main() -> None:
     p.add_argument("--duration", type=int)
     p.add_argument("--resolution")
     p.add_argument("--mode")
-    p.add_argument("--aspect")
+    p.add_argument("--aspect", "--aspect-ratio", dest="aspect")
     p.add_argument("--generate-audio", action="store_true")
+    p.add_argument("--frame-image")
+    p.add_argument("--input-reference")
     p.add_argument("--out")
     p.add_argument("--wait", action="store_true")
     p.set_defaults(func=run_generate_video)

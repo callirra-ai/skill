@@ -59,7 +59,8 @@ python3 scripts/callirra_api.py generate-video \
   --prompt "A drone shot over mountains" \
   --duration 10 \
   --resolution 720p \
-  --wait
+  --wait \
+  --out clip.mp4
 
 # Inspect or cancel a task
 python3 scripts/callirra_api.py task <TASK_ID>
