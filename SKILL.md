@@ -84,6 +84,7 @@ python3 scripts/callirra_api.py creative
 ## API Reference
 
 See `references/callirra-api-reference.md` for endpoint details and model examples.
+See `references/creative-knowledge.json` for the full curated creative knowledge base (art, design, image, video resources, styles and cinematic vocabulary). It contains 110 resources, 8 categories and 39 style keywords.
 
 ## Error Handling
 

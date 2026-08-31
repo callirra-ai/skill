@@ -27,6 +27,7 @@ python3 scripts/callirra_api.py generate-video --model seedance-2.5 --prompt "�
 - `SKILL.md` — 主技能说明
 - `scripts/callirra_api.py` — 零依赖 Python CLI
 - `references/callirra-api-reference.md` — API 参考
+- `references/creative-knowledge.json` — 完整创意知识库（110 资源、8 分类、39 风格）
 - `workflows/` — 可复用工作流
 
 ---

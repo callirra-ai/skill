@@ -29,6 +29,7 @@ python3 scripts/callirra_api.py generate-video --model seedance-2.5 --prompt "A 
 - `SKILL.md` — main skill instructions
 - `scripts/callirra_api.py` — zero-dependency Python CLI
 - `references/callirra-api-reference.md` — API reference
+- `references/creative-knowledge.json` — full curated creative knowledge base (110 resources, 8 categories, 39 styles)
 - `workflows/` — reusable recipe workflows
 
 ---

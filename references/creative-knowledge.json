@@ -1,0 +1,1973 @@
+{
+  "version": "2026.08",
+  "categories": [
+    {
+      "id": "models",
+      "title": "AI Image & Video Models",
+      "description": "Hosted generation services and model platforms for image, video and design work.",
+      "emoji": "🧠"
+    },
+    {
+      "id": "opensource",
+      "title": "Open-Source Tools & Models",
+      "description": "Self-hosted pipelines, local generation, examples and awesome lists.",
+      "emoji": "🔧"
+    },
+    {
+      "id": "prompt",
+      "title": "Prompt Libraries & Guides",
+      "description": "Prompt databases, style keyword references and prompt engineering guides.",
+      "emoji": "✍️"
+    },
+    {
+      "id": "design",
+      "title": "Design Inspiration & Systems",
+      "description": "Galleries, art platforms, design systems and UI/UX references.",
+      "emoji": "🎨"
+    },
+    {
+      "id": "assets",
+      "title": "Free Assets & Visual Libraries",
+      "description": "Fonts, colors, stock photos, images, icons and illustration assets.",
+      "emoji": "📦"
+    },
+    {
+      "id": "cinematography",
+      "title": "Cinematography & Film Language",
+      "description": "Camera shots, movement, lighting, composition and color vocab for prompts.",
+      "emoji": "🎬"
+    },
+    {
+      "id": "styles",
+      "title": "Visual Style Lexicon",
+      "description": "Art movements, aesthetics and style keywords that make prompts expressive.",
+      "emoji": "🖌️"
+    },
+    {
+      "id": "community",
+      "title": "Communities & Learning",
+      "description": "Active communities and learning hubs for AI art, video and design.",
+      "emoji": "💬"
+    }
+  ],
+  "resources": [
+    {
+      "id": "midjourney",
+      "category": "models",
+      "name": "Midjourney",
+      "url": "https://www.midjourney.com/",
+      "description": "Best-known aesthetic image generator with strong style control and community prompt culture.",
+      "tags": [
+        "image",
+        "style",
+        "aesthetic",
+        "community"
+      ],
+      "type": "model",
+      "featured": true
+    },
+    {
+      "id": "kling",
+      "category": "models",
+      "name": "Kling AI",
+      "url": "https://klingai.com/",
+      "description": "High-quality text-to-video / image-to-video model, especially good for dynamic human motion.",
+      "tags": [
+        "video",
+        "motion",
+        "image-to-video"
+      ],
+      "type": "model",
+      "featured": true
+    },
+    {
+      "id": "runway",
+      "category": "models",
+      "name": "Runway",
+      "url": "https://runwayml.com/",
+      "description": "Creative AI video suite with strong editing controls, Gen-3/Gen-4 style and professional workflows.",
+      "tags": [
+        "video",
+        "editing",
+        "VFX"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "pika",
+      "category": "models",
+      "name": "Pika",
+      "url": "https://pika.art/",
+      "description": "Playful video generator popular for short viral clips, motion effects and stylized scenes.",
+      "tags": [
+        "video",
+        "short-form",
+        "effects"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "luma-dream-machine",
+      "category": "models",
+      "name": "Luma Dream Machine",
+      "url": "https://lumalabs.ai/dream-machine",
+      "description": "Fast video model with strong realism, camera control and cinematic prompt guides.",
+      "tags": [
+        "video",
+        "cinematic",
+        "camera"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "sora",
+      "category": "models",
+      "name": "Sora",
+      "url": "https://openai.com/sora/",
+      "description": "OpenAI video model with impressive scene continuity and realistic physics.",
+      "tags": [
+        "video",
+        "realism",
+        "physics"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "veo",
+      "category": "models",
+      "name": "Google Veo",
+      "url": "https://deepmind.google/technologies/veo/",
+      "description": "Google DeepMind video generation model known for cinematic quality and native audio support.",
+      "tags": [
+        "video",
+        "cinematic",
+        "audio"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "seedance",
+      "category": "models",
+      "name": "Seedance",
+      "url": "https://seed.bytedance.com/",
+      "description": "ByteDance’s video model family with strong motion, camera and 4K generation capability.",
+      "tags": [
+        "video",
+        "4K",
+        "motion"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "seedream",
+      "category": "models",
+      "name": "Seedream",
+      "url": "https://seed.bytedance.com/",
+      "description": "ByteDance Seed image model family, strong at cinematic visuals, advertising and high-fidelity details.",
+      "tags": [
+        "image",
+        "cinematic",
+        "advertising",
+        "detail"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "nano-banana",
+      "category": "models",
+      "name": "Nano Banana / Gemini Image",
+      "url": "https://deepmind.google/models/gemini-image/",
+      "description": "Google’s Gemini image model with strong editing, character consistency and playful creative control.",
+      "tags": [
+        "image",
+        "editing",
+        "consistency",
+        "google"
+      ],
+      "type": "model",
+      "featured": true
+    },
+    {
+      "id": "gpt-image",
+      "category": "models",
+      "name": "OpenAI Image API (GPT Image)",
+      "url": "https://developers.openai.com/api/reference/resources/images/methods/generate",
+      "description": "OpenAI’s image generation API for prompts, edits, extensions and production-ready images.",
+      "tags": [
+        "image",
+        "api",
+        "openai",
+        "production"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "minimax-hailuo",
+      "category": "models",
+      "name": "MiniMax Hailuo",
+      "url": "https://hailuoai.com/",
+      "description": "Popular video model for expressive character animation and fast social-ready clips.",
+      "tags": [
+        "video",
+        "character",
+        "animation"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "ideogram",
+      "category": "models",
+      "name": "Ideogram",
+      "url": "https://ideogram.ai/",
+      "description": "Image model with excellent text rendering, useful for posters, logos and typography-heavy art.",
+      "tags": [
+        "image",
+        "text",
+        "poster",
+        "typography"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "leonardo",
+      "category": "models",
+      "name": "Leonardo AI",
+      "url": "https://leonardo.ai/",
+      "description": "Production-oriented image platform with fine-tuned models, canvas editing and consistent characters.",
+      "tags": [
+        "image",
+        "production",
+        "character",
+        "canvas"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "recraft",
+      "category": "models",
+      "name": "Recraft",
+      "url": "https://www.recraft.ai/",
+      "description": "Design-first image model with vector illustration, icon and brand style controls.",
+      "tags": [
+        "image",
+        "vector",
+        "brand",
+        "design"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "krea",
+      "category": "models",
+      "name": "Krea AI",
+      "url": "https://www.krea.ai/",
+      "description": "Real-time image and video tool with style mixing, enhancers and fast prototyping.",
+      "tags": [
+        "image",
+        "real-time",
+        "style",
+        "prototype"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "firefly",
+      "category": "models",
+      "name": "Adobe Firefly",
+      "url": "https://www.adobe.com/products/firefly.html",
+      "description": "Adobe’s commercially safe image model integrated with Photoshop and Creative Cloud.",
+      "tags": [
+        "image",
+        "commercial",
+        "adobe",
+        "design"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "freepik-ai",
+      "category": "models",
+      "name": "Freepik AI",
+      "url": "https://www.freepik.com/ai",
+      "description": "Image/video generator with a large creative asset library and easy design-oriented outputs.",
+      "tags": [
+        "image",
+        "video",
+        "assets",
+        "design"
+      ],
+      "type": "model"
+    },
+    {
+      "id": "replicate",
+      "category": "models",
+      "name": "Replicate",
+      "url": "https://replicate.com/",
+      "description": "Hosted API for thousands of open-source image/video models, great for experimentation.",
+      "tags": [
+        "api",
+        "open-source",
+        "models",
+        "experiment"
+      ],
+      "type": "tool"
+    },
+    {
+      "id": "fal-ai",
+      "category": "models",
+      "name": "fal.ai",
+      "url": "https://fal.ai/",
+      "description": "Low-latency API platform for image, video and audio models used by production apps.",
+      "tags": [
+        "api",
+        "production",
+        "image",
+        "video"
+      ],
+      "type": "tool"
+    },
+    {
+      "id": "huggingface-models",
+      "category": "models",
+      "name": "Hugging Face Model Hub",
+      "url": "https://huggingface.co/models",
+      "description": "The largest open model hub for diffusion, video and multimodal models, plus datasets and demos.",
+      "tags": [
+        "models",
+        "open-source",
+        "datasets",
+        "community"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "comfyui",
+      "category": "opensource",
+      "name": "ComfyUI",
+      "url": "https://github.com/Comfy-Org/ComfyUI",
+      "description": "Node-based, self-hosted AI image/video generation pipeline with endless reusable workflows.",
+      "tags": [
+        "workflow",
+        "nodes",
+        "local",
+        "power-user"
+      ],
+      "type": "open-source",
+      "featured": true
+    },
+    {
+      "id": "a1111",
+      "category": "opensource",
+      "name": "Stable Diffusion WebUI (AUTOMATIC1111)",
+      "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+      "description": "Classic web UI for Stable Diffusion with extensive extensions and community tutorials.",
+      "tags": [
+        "stable-diffusion",
+        "web-ui",
+        "extensions"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "invokeai",
+      "category": "opensource",
+      "name": "InvokeAI",
+      "url": "https://github.com/invoke-ai/InvokeAI",
+      "description": "Professional, non-destructive image workspace built for artists and designers.",
+      "tags": [
+        "image",
+        "workspace",
+        "artists",
+        "local"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "fooocus",
+      "category": "opensource",
+      "name": "Fooocus",
+      "url": "https://github.com/lllyasviel/Fooocus",
+      "description": "Offline image generator focused on simplicity and one-click quality results.",
+      "tags": [
+        "image",
+        "simple",
+        "local",
+        "offline"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "flux",
+      "category": "opensource",
+      "name": "FLUX (Black Forest Labs)",
+      "url": "https://github.com/black-forest-labs/flux",
+      "description": "Open-weight image model family with strong prompt adherence, text rendering and fine-tuning ecosystem.",
+      "tags": [
+        "image",
+        "open-weight",
+        "text",
+        "fine-tune"
+      ],
+      "type": "open-source",
+      "featured": true
+    },
+    {
+      "id": "qwen-image",
+      "category": "opensource",
+      "name": "Qwen-Image",
+      "url": "https://github.com/QwenLM/Qwen-Image",
+      "description": "20B open image generation model with excellent bilingual text rendering and high prompt fidelity.",
+      "tags": [
+        "image",
+        "text-rendering",
+        "bilingual",
+        "open-weight"
+      ],
+      "type": "open-source",
+      "featured": true
+    },
+    {
+      "id": "hidream-o1",
+      "category": "opensource",
+      "name": "HiDream-O1 / HiDream-I1",
+      "url": "https://github.com/HiDream-ai/HiDream-O1-Image",
+      "description": "Open pixel-native image transformers with strong reasoning, layout and detail control.",
+      "tags": [
+        "image",
+        "pixel-native",
+        "reasoning",
+        "open-weight"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "z-image",
+      "category": "opensource",
+      "name": "Z-Image",
+      "url": "https://github.com/Tongyi-MAI/Z-Image",
+      "description": "Open image generation model focused on efficiency and competitive quality in the FLUX family.",
+      "tags": [
+        "image",
+        "efficiency",
+        "open-weight",
+        "comparison"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "wan22",
+      "category": "opensource",
+      "name": "Wan 2.2",
+      "url": "https://github.com/Wan-Video/Wan2.2",
+      "description": "Advanced open-source large-scale video model with strong motion realism and multi-language prompts.",
+      "tags": [
+        "video",
+        "open-source",
+        "motion",
+        "realism"
+      ],
+      "type": "open-source",
+      "featured": true
+    },
+    {
+      "id": "hunyuanvideo",
+      "category": "opensource",
+      "name": "HunyuanVideo",
+      "url": "https://github.com/Tencent-Hunyuan/HunyuanVideo",
+      "description": "Tencent’s open video generation framework with image-to-video and customization variants.",
+      "tags": [
+        "video",
+        "open-source",
+        "i2v",
+        "framework"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "ltx-video",
+      "category": "opensource",
+      "name": "LTX-Video",
+      "url": "https://github.com/Lightricks/LTX-Video",
+      "description": "Fast, open video model known for real-time generation speed and controllable motion.",
+      "tags": [
+        "video",
+        "fast",
+        "real-time",
+        "open-source"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "mochi",
+      "category": "opensource",
+      "name": "Mochi",
+      "url": "https://github.com/genmoai/mochi",
+      "description": "Open video generation model from Genmo with expressive motion and strong prompt adherence.",
+      "tags": [
+        "video",
+        "open-source",
+        "motion",
+        "expression"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "cogvideox",
+      "category": "opensource",
+      "name": "CogVideoX",
+      "url": "https://github.com/THUDM/CogVideo",
+      "description": "Open text-to-video diffusion model family with Chinese/English prompt support.",
+      "tags": [
+        "video",
+        "open-source",
+        "bilingual",
+        "diffusion"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "open-sora",
+      "category": "opensource",
+      "name": "Open-Sora",
+      "url": "https://github.com/hpcaitech/Open-Sora",
+      "description": "Open-source video production framework that democratizes high-quality video generation.",
+      "tags": [
+        "video",
+        "open-source",
+        "production",
+        "framework"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "animatediff",
+      "category": "opensource",
+      "name": "AnimateDiff",
+      "url": "https://github.com/guoyww/AnimateDiff",
+      "description": "Animate your Stable Diffusion stills with motion modules; a foundational open animation technique.",
+      "tags": [
+        "animation",
+        "stable-diffusion",
+        "motion",
+        "open-source"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "svd",
+      "category": "opensource",
+      "name": "Stable Video Diffusion",
+      "url": "https://huggingface.co/stabilityai/stable-video-diffusion-img2vid",
+      "description": "Stability AI’s open video diffusion models for image-to-video and multi-view synthesis.",
+      "tags": [
+        "video",
+        "diffusion",
+        "image-to-video",
+        "open-source"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "comfy-examples",
+      "category": "opensource",
+      "name": "ComfyUI Examples",
+      "url": "https://github.com/comfyanonymous/ComfyUI_examples",
+      "description": "Official example workflows for control nets, IP-Adapter, video, upscaling and more.",
+      "tags": [
+        "workflow",
+        "examples",
+        "comfyui",
+        "controlnet"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "controlnet",
+      "category": "opensource",
+      "name": "ControlNet",
+      "url": "https://github.com/lllyasviel/ControlNet",
+      "description": "Add conditional control (poses, edges, depth, scribbles) to diffusion image generation.",
+      "tags": [
+        "controlnet",
+        "conditioning",
+        "poses",
+        "depth"
+      ],
+      "type": "open-source",
+      "featured": true
+    },
+    {
+      "id": "ip-adapter",
+      "category": "opensource",
+      "name": "IP-Adapter",
+      "url": "https://github.com/tencent-ailab/IP-Adapter",
+      "description": "Use reference images to drive style/character consistency in diffusion models.",
+      "tags": [
+        "reference",
+        "style",
+        "character",
+        "consistency"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "diffusers",
+      "category": "opensource",
+      "name": "Hugging Face Diffusers",
+      "url": "https://github.com/huggingface/diffusers",
+      "description": "Official library for diffusion models: pipelines, schedulers, LoRA and community models.",
+      "tags": [
+        "library",
+        "diffusion",
+        "pipelines",
+        "hugging-face"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "krita-ai-diffusion",
+      "category": "opensource",
+      "name": "Krita AI Diffusion",
+      "url": "https://github.com/Acly/krita-ai-diffusion",
+      "description": "Free plugin that brings Stable Diffusion/Flux generation directly into Krita painting workflow.",
+      "tags": [
+        "krita",
+        "plugin",
+        "painting",
+        "local"
+      ],
+      "type": "open-source"
+    },
+    {
+      "id": "awesome-stable-diffusion",
+      "category": "opensource",
+      "name": "Awesome Stable Diffusion",
+      "url": "https://github.com/doanbactam/awesome-stable-diffusion",
+      "description": "Curated list of Stable Diffusion resources: models, tools, papers and guides.",
+      "tags": [
+        "awesome-list",
+        "stable-diffusion",
+        "resources"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "awesome-comfyui",
+      "category": "opensource",
+      "name": "Awesome ComfyUI",
+      "url": "https://github.com/umitkacar/awesome-comfyui",
+      "description": "Curated ComfyUI workflows, nodes, custom tools and learning materials.",
+      "tags": [
+        "awesome-list",
+        "comfyui",
+        "workflows"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "awesome-video-generation",
+      "category": "opensource",
+      "name": "Awesome Video Generation",
+      "url": "https://github.com/backblaze-labs/awesome-video-generation",
+      "description": "Curated list of AI video generation APIs, SDKs, models and production infrastructure.",
+      "tags": [
+        "awesome-list",
+        "video",
+        "apis",
+        "production"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "awesome-ai-video-models",
+      "category": "opensource",
+      "name": "Awesome AI Video Models",
+      "url": "https://github.com/Anil-matcha/awesome-ai-video-models",
+      "description": "Up-to-date list of AI video models, tools, papers and open-source releases.",
+      "tags": [
+        "awesome-list",
+        "video-models",
+        "news",
+        "research"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "awesome-generative-ai",
+      "category": "opensource",
+      "name": "Awesome Generative AI",
+      "url": "https://github.com/SeriousSamV/awesome-generative-ai",
+      "description": "Curated modern generative AI projects, services and open-source resources.",
+      "tags": [
+        "awesome-list",
+        "generative-ai",
+        "projects",
+        "services"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "prompthero",
+      "category": "prompt",
+      "name": "PromptHero",
+      "url": "https://prompthero.com/",
+      "description": "Searchable prompt library for Midjourney, Stable Diffusion and video models.",
+      "tags": [
+        "prompt",
+        "search",
+        "midjourney",
+        "stable-diffusion"
+      ],
+      "type": "reference",
+      "featured": true
+    },
+    {
+      "id": "lexica",
+      "category": "prompt",
+      "name": "Lexica",
+      "url": "https://lexica.art/",
+      "description": "Stable Diffusion prompt search engine with visual inspiration and style exploration.",
+      "tags": [
+        "prompt",
+        "search",
+        "stable-diffusion",
+        "inspiration"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "civitai",
+      "category": "prompt",
+      "name": "Civitai",
+      "url": "https://civitai.com/",
+      "description": "Huge community hub for models, LoRAs, styles, prompts and workflow sharing.",
+      "tags": [
+        "community",
+        "models",
+        "lora",
+        "prompts"
+      ],
+      "type": "community",
+      "featured": true
+    },
+    {
+      "id": "openart",
+      "category": "prompt",
+      "name": "OpenArt",
+      "url": "https://openart.ai/",
+      "description": "AI art prompt gallery and generator with style search and community creations.",
+      "tags": [
+        "prompt",
+        "gallery",
+        "styles",
+        "community"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "prompting-guide",
+      "category": "prompt",
+      "name": "Prompting Guide",
+      "url": "https://promptingguide.ai/",
+      "description": "Comprehensive prompt engineering techniques for text, image and multimodal models.",
+      "tags": [
+        "guide",
+        "prompt-engineering",
+        "multimodal"
+      ],
+      "type": "guide"
+    },
+    {
+      "id": "learn-prompting",
+      "category": "prompt",
+      "name": "Learn Prompting",
+      "url": "https://learnprompting.org/",
+      "description": "Free open course covering prompt engineering from basics to advanced applications.",
+      "tags": [
+        "course",
+        "prompt-engineering",
+        "free"
+      ],
+      "type": "guide"
+    },
+    {
+      "id": "dair-prompt-engineering",
+      "category": "prompt",
+      "name": "Prompt Engineering Guide (dair-ai)",
+      "url": "https://github.com/dair-ai/Prompt-Engineering-Guide",
+      "description": "Papers, courses, notebooks and resources for prompt engineering, RAG and agents.",
+      "tags": [
+        "github",
+        "guide",
+        "papers",
+        "notebooks"
+      ],
+      "type": "guide"
+    },
+    {
+      "id": "awesome-prompts",
+      "category": "prompt",
+      "name": "Awesome Prompts",
+      "url": "https://github.com/ai-boost/awesome-prompts",
+      "description": "Curated prompt list from top-rated GPTs plus advanced prompt engineering papers.",
+      "tags": [
+        "github",
+        "prompt-list",
+        "gpts"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "mj-styles",
+      "category": "prompt",
+      "name": "MidJourney Styles & Keywords Reference",
+      "url": "https://github.com/willwulfken/MidJourney-Styles-and-Keywords-Reference",
+      "description": "Massive reference of MidJourney style/keyword terms, parameter comparisons and examples.",
+      "tags": [
+        "midjourney",
+        "styles",
+        "keywords",
+        "reference"
+      ],
+      "type": "reference",
+      "featured": true
+    },
+    {
+      "id": "stable-diffusion-art",
+      "category": "prompt",
+      "name": "Stable Diffusion Art",
+      "url": "https://stable-diffusion-art.com/",
+      "description": "Practical tutorials and prompt guides for Stable Diffusion, SDXL, Flux and model settings.",
+      "tags": [
+        "tutorial",
+        "stable-diffusion",
+        "sdxl",
+        "flux"
+      ],
+      "type": "guide"
+    },
+    {
+      "id": "promptbase",
+      "category": "prompt",
+      "name": "PromptBase",
+      "url": "https://promptbase.com/",
+      "description": "Marketplace for quality prompts across image, video and text generation.",
+      "tags": [
+        "marketplace",
+        "prompt",
+        "paid",
+        "quality"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "awwwards",
+      "category": "design",
+      "name": "Awwwards",
+      "url": "https://www.awwwards.com/",
+      "description": "Awards and inspiration for cutting-edge web design, interaction and creative development.",
+      "tags": [
+        "web-design",
+        "inspiration",
+        "awards",
+        "UI"
+      ],
+      "type": "gallery"
+    },
+    {
+      "id": "behance",
+      "category": "design",
+      "name": "Behance",
+      "url": "https://www.behance.net/",
+      "description": "Adobe’s creative portfolio network for graphic design, branding, photography and motion.",
+      "tags": [
+        "portfolio",
+        "design",
+        "branding",
+        "photography"
+      ],
+      "type": "gallery",
+      "featured": true
+    },
+    {
+      "id": "dribbble",
+      "category": "design",
+      "name": "Dribbble",
+      "url": "https://dribbble.com/",
+      "description": "Design shots and UI/UX inspiration for product design, illustration and branding.",
+      "tags": [
+        "ui",
+        "ux",
+        "shots",
+        "design"
+      ],
+      "type": "gallery"
+    },
+    {
+      "id": "artstation",
+      "category": "design",
+      "name": "ArtStation",
+      "url": "https://www.artstation.com/",
+      "description": "Concept art, game art, illustration and digital painting showcase from professional artists.",
+      "tags": [
+        "concept-art",
+        "illustration",
+        "game-art",
+        "digital-painting"
+      ],
+      "type": "gallery",
+      "featured": true
+    },
+    {
+      "id": "itsnicethat",
+      "category": "design",
+      "name": "It’s Nice That",
+      "url": "https://www.itsnicethat.com/",
+      "description": "Daily creative culture and design inspiration across art, graphics, photography and motion.",
+      "tags": [
+        "inspiration",
+        "art",
+        "graphics",
+        "culture"
+      ],
+      "type": "gallery"
+    },
+    {
+      "id": "dezeen",
+      "category": "design",
+      "name": "Dezeen",
+      "url": "https://www.dezeen.com/",
+      "description": "Architecture and design magazine with sleek, contemporary visual references.",
+      "tags": [
+        "architecture",
+        "design",
+        "interior",
+        "culture"
+      ],
+      "type": "gallery"
+    },
+    {
+      "id": "muzli",
+      "category": "design",
+      "name": "Muzli",
+      "url": "https://muz.li/",
+      "description": "Design inspiration feed aggregated from the best design sites, updated daily.",
+      "tags": [
+        "inspiration",
+        "feed",
+        "design",
+        "daily"
+      ],
+      "type": "gallery"
+    },
+    {
+      "id": "thefwa",
+      "category": "design",
+      "name": "FWA (Favourite Website Awards)",
+      "url": "https://thefwa.com/",
+      "description": "Award-winning digital experiences, interactive sites and creative technology.",
+      "tags": [
+        "interactive",
+        "web",
+        "creative-tech",
+        "awards"
+      ],
+      "type": "gallery"
+    },
+    {
+      "id": "pinterest",
+      "category": "design",
+      "name": "Pinterest",
+      "url": "https://www.pinterest.com/",
+      "description": "Massive visual discovery engine for moodboards, aesthetics, interiors, fashion and art.",
+      "tags": [
+        "moodboard",
+        "aesthetic",
+        "inspiration",
+        "discovery"
+      ],
+      "type": "gallery"
+    },
+    {
+      "id": "arena",
+      "category": "design",
+      "name": "Are.na",
+      "url": "https://www.are.na/",
+      "description": "Social bookmarking for visual research, moodboards and creative reference collecting.",
+      "tags": [
+        "research",
+        "moodboard",
+        "visual",
+        "reference"
+      ],
+      "type": "gallery"
+    },
+    {
+      "id": "material3",
+      "category": "design",
+      "name": "Material Design 3",
+      "url": "https://m3.material.io/",
+      "description": "Google’s design system with color, typography, motion and component guidance.",
+      "tags": [
+        "design-system",
+        "google",
+        "UI",
+        "components"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "apple-hig",
+      "category": "design",
+      "name": "Apple Human Interface Guidelines",
+      "url": "https://developer.apple.com/design/human-interface-guidelines/",
+      "description": "Apple’s platform design language for iOS/macOS apps and product experiences.",
+      "tags": [
+        "design-system",
+        "apple",
+        "UI",
+        "product"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "carbon",
+      "category": "design",
+      "name": "Carbon Design System",
+      "url": "https://carbondesignsystem.com/",
+      "description": "IBM’s open design system for enterprise products, data visualization and consistent UI.",
+      "tags": [
+        "design-system",
+        "enterprise",
+        "IBM",
+        "components"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "radix-ui",
+      "category": "design",
+      "name": "Radix UI",
+      "url": "https://www.radix-ui.com/",
+      "description": "Primitive, accessible React components used by many modern design systems.",
+      "tags": [
+        "components",
+        "accessible",
+        "react",
+        "design-system"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "shadcn-ui",
+      "category": "design",
+      "name": "shadcn/ui",
+      "url": "https://ui.shadcn.com/",
+      "description": "Beautifully crafted modern UI components built on Radix and Tailwind CSS.",
+      "tags": [
+        "components",
+        "tailwind",
+        "react",
+        "UI"
+      ],
+      "type": "reference",
+      "featured": true
+    },
+    {
+      "id": "tailwind",
+      "category": "design",
+      "name": "Tailwind CSS",
+      "url": "https://tailwindcss.com/",
+      "description": "Utility-first CSS framework for rapidly building custom, modern interfaces.",
+      "tags": [
+        "css",
+        "utility-first",
+        "frontend",
+        "design"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "open-props",
+      "category": "design",
+      "name": "Open Props",
+      "url": "https://open-props.style/",
+      "description": "Open CSS custom properties for typography, color, spacing and component consistency.",
+      "tags": [
+        "css",
+        "design-tokens",
+        "variables",
+        "open-source"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "ant-design",
+      "category": "design",
+      "name": "Ant Design",
+      "url": "https://ant.design/",
+      "description": "Enterprise UI design language and React component library used worldwide.",
+      "tags": [
+        "design-system",
+        "react",
+        "enterprise",
+        "components"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "figma-community",
+      "category": "design",
+      "name": "Figma Community",
+      "url": "https://www.figma.com/community/",
+      "description": "Templates, UI kits, plugins and design resources shared by the Figma community.",
+      "tags": [
+        "figma",
+        "templates",
+        "ui-kits",
+        "plugins"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "best-free-ui-ux",
+      "category": "design",
+      "name": "Best Free UI/UX Resources",
+      "url": "https://github.com/sathvik-spartan/Best-free-ui-ux-resources",
+      "description": "Curated free tools, kits, libraries and assets for UI/UX design and front-end development.",
+      "tags": [
+        "ui-ux",
+        "free",
+        "kits",
+        "libraries"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "google-fonts",
+      "category": "assets",
+      "name": "Google Fonts",
+      "url": "https://fonts.google.com/",
+      "description": "Free, open-source font library with variable fonts and full web/design usage.",
+      "tags": [
+        "fonts",
+        "free",
+        "typography",
+        "variables"
+      ],
+      "type": "asset",
+      "featured": true
+    },
+    {
+      "id": "fontshare",
+      "category": "assets",
+      "name": "Fontshare",
+      "url": "https://www.fontshare.com/",
+      "description": "High-quality free fonts by ITF with a generous commercial license.",
+      "tags": [
+        "fonts",
+        "free",
+        "commercial",
+        "typography"
+      ],
+      "type": "asset"
+    },
+    {
+      "id": "fontsinuse",
+      "category": "assets",
+      "name": "Fonts In Use",
+      "url": "https://fontsinuse.com/",
+      "description": "Real-world examples of typography in branding, editorial, packaging and art.",
+      "tags": [
+        "typography",
+        "reference",
+        "real-world",
+        "inspiration"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "typewolf",
+      "category": "assets",
+      "name": "Typewolf",
+      "url": "https://www.typewolf.com/",
+      "description": "Typography site with font recommendations, pairings and site-of-the-day examples.",
+      "tags": [
+        "typography",
+        "fonts",
+        "pairing",
+        "recommendations"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "coolors",
+      "category": "assets",
+      "name": "Coolors",
+      "url": "https://coolors.co/",
+      "description": "Fast color palette generator with trending palettes and export to every format.",
+      "tags": [
+        "color",
+        "palette",
+        "generator",
+        "design"
+      ],
+      "type": "asset",
+      "featured": true
+    },
+    {
+      "id": "colorhunt",
+      "category": "assets",
+      "name": "Color Hunt",
+      "url": "https://colorhunt.co/",
+      "description": "Curated color palettes for designers, updated with modern aesthetic combinations.",
+      "tags": [
+        "color",
+        "palette",
+        "inspiration",
+        "curated"
+      ],
+      "type": "asset"
+    },
+    {
+      "id": "adobe-color",
+      "category": "assets",
+      "name": "Adobe Color",
+      "url": "https://color.adobe.com/",
+      "description": "Color wheel, themes and accessibility tools from Adobe for harmonious palettes.",
+      "tags": [
+        "color",
+        "wheel",
+        "harmony",
+        "accessibility"
+      ],
+      "type": "asset"
+    },
+    {
+      "id": "unsplash",
+      "category": "assets",
+      "name": "Unsplash",
+      "url": "https://unsplash.com/",
+      "description": "High-resolution free stock photos with strong search and curated collections.",
+      "tags": [
+        "photos",
+        "stock",
+        "free",
+        "reference"
+      ],
+      "type": "asset",
+      "featured": true
+    },
+    {
+      "id": "pexels",
+      "category": "assets",
+      "name": "Pexels",
+      "url": "https://www.pexels.com/",
+      "description": "Free stock photos and videos with easy licensing and high-quality downloads.",
+      "tags": [
+        "photos",
+        "videos",
+        "stock",
+        "free"
+      ],
+      "type": "asset"
+    },
+    {
+      "id": "pixabay",
+      "category": "assets",
+      "name": "Pixabay",
+      "url": "https://pixabay.com/",
+      "description": "Large free media library: photos, illustrations, vectors and stock videos.",
+      "tags": [
+        "photos",
+        "videos",
+        "vectors",
+        "free"
+      ],
+      "type": "asset"
+    },
+    {
+      "id": "openverse",
+      "category": "assets",
+      "name": "Openverse",
+      "url": "https://openverse.org/",
+      "description": "Openly licensed images, audio and media searchable across many public sources.",
+      "tags": [
+        "open-license",
+        "search",
+        "images",
+        "audio"
+      ],
+      "type": "asset"
+    },
+    {
+      "id": "undraw",
+      "category": "assets",
+      "name": "unDraw",
+      "url": "https://undraw.co/",
+      "description": "Open-source illustration library with customizable colors and modern flat style.",
+      "tags": [
+        "illustration",
+        "svg",
+        "open-source",
+        "flat-design"
+      ],
+      "type": "asset"
+    },
+    {
+      "id": "storyset",
+      "category": "assets",
+      "name": "Storyset",
+      "url": "https://storyset.com/",
+      "description": "Free customizable illustration scenes for websites, apps and presentations.",
+      "tags": [
+        "illustration",
+        "svg",
+        "customizable",
+        "free"
+      ],
+      "type": "asset"
+    },
+    {
+      "id": "lucide",
+      "category": "assets",
+      "name": "Lucide",
+      "url": "https://lucide.dev/",
+      "description": "Open-source icon set with consistent, crisp line icons for modern interfaces.",
+      "tags": [
+        "icons",
+        "open-source",
+        "line-icons",
+        "UI"
+      ],
+      "type": "asset"
+    },
+    {
+      "id": "iconify",
+      "category": "assets",
+      "name": "Iconify",
+      "url": "https://iconify.design/",
+      "description": "Unified icon framework with hundreds of open icon sets in one searchable library.",
+      "tags": [
+        "icons",
+        "framework",
+        "search",
+        "open-source"
+      ],
+      "type": "asset"
+    },
+    {
+      "id": "heroicons",
+      "category": "assets",
+      "name": "Heroicons",
+      "url": "https://heroicons.com/",
+      "description": "Beautiful hand-crafted SVG icons from Tailwind Labs, free to use.",
+      "tags": [
+        "icons",
+        "svg",
+        "tailwind",
+        "free"
+      ],
+      "type": "asset"
+    },
+    {
+      "id": "openmoji",
+      "category": "assets",
+      "name": "OpenMoji",
+      "url": "https://openmoji.org/",
+      "description": "Open-source emoji and icon system with consistent visual language.",
+      "tags": [
+        "emoji",
+        "open-source",
+        "icons",
+        "system"
+      ],
+      "type": "asset"
+    },
+    {
+      "id": "studiobinder-shots",
+      "category": "cinematography",
+      "name": "StudioBinder: Camera Shots",
+      "url": "https://www.studiobinder.com/blog/ultimate-guide-to-camera-shots/",
+      "description": "Complete shot size and camera angle guide with diagrams and film examples.",
+      "tags": [
+        "camera",
+        "shots",
+        "angles",
+        "film"
+      ],
+      "type": "guide",
+      "featured": true
+    },
+    {
+      "id": "studiobinder-movement",
+      "category": "cinematography",
+      "name": "StudioBinder: Camera Movement",
+      "url": "https://www.studiobinder.com/blog/ultimate-guide-to-camera-movement/",
+      "description": "Guide to dolly, crane, pan, tilt, tracking, handheld and gimbal movement.",
+      "tags": [
+        "camera",
+        "movement",
+        "cinematography",
+        "guide"
+      ],
+      "type": "guide"
+    },
+    {
+      "id": "studiobinder-lighting",
+      "category": "cinematography",
+      "name": "StudioBinder: Lighting",
+      "url": "https://www.studiobinder.com/blog/ultimate-guide-to-camera-lighting/",
+      "description": "Three-point lighting, hard/soft light, color temperature and visual storytelling.",
+      "tags": [
+        "lighting",
+        "three-point",
+        "cinematography",
+        "guide"
+      ],
+      "type": "guide"
+    },
+    {
+      "id": "luma-cinematic-prompts",
+      "category": "cinematography",
+      "name": "Luma: Cinematic AI Video Prompts",
+      "url": "https://lumalabs.ai/news/cinematic-ai-video-prompts",
+      "description": "Real examples of shot types, lighting and film looks used in AI video prompts.",
+      "tags": [
+        "video",
+        "prompt",
+        "cinematic",
+        "examples"
+      ],
+      "type": "guide",
+      "featured": true
+    },
+    {
+      "id": "invideo-cinematography",
+      "category": "cinematography",
+      "name": "InVideo: Cinematography Terms for AI Video",
+      "url": "https://invideo.io/faq/what-cinematography-terms-work-best-in-ai-video-prompts/",
+      "description": "Cheat sheet of cinematography terms that improve Runway, Kling, Sora and AI video results.",
+      "tags": [
+        "video",
+        "terms",
+        "cheat-sheet",
+        "runway"
+      ],
+      "type": "guide"
+    },
+    {
+      "id": "nofilmschool",
+      "category": "cinematography",
+      "name": "No Film School",
+      "url": "https://nofilmschool.com/",
+      "description": "Film education site covering cinematography, editing, color and production craft.",
+      "tags": [
+        "film",
+        "education",
+        "cinematography",
+        "production"
+      ],
+      "type": "guide"
+    },
+    {
+      "id": "wikipedia-cinematography",
+      "category": "cinematography",
+      "name": "Cinematography (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Cinematography",
+      "description": "Broad reference for camera, lens, lighting and visual storytelling vocabulary.",
+      "tags": [
+        "reference",
+        "cinematography",
+        "camera",
+        "lighting"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "art-movements-list",
+      "category": "styles",
+      "name": "List of Art Movements",
+      "url": "https://en.wikipedia.org/wiki/List_of_art_movements",
+      "description": "Quick reference for historic art movements and visual styles.",
+      "tags": [
+        "art-history",
+        "styles",
+        "movements",
+        "reference"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "designstyles-history",
+      "category": "styles",
+      "name": "Design Styles & Aesthetics",
+      "url": "https://www.behance.net/search/projects?search=design%20styles",
+      "description": "Search Behance for current visual styles: minimal, brutalist, Y2K, retro and more.",
+      "tags": [
+        "design",
+        "styles",
+        "search",
+        "inspiration"
+      ],
+      "type": "gallery"
+    },
+    {
+      "id": "civitai-styles",
+      "category": "styles",
+      "name": "Civitai Style & LoRA Browser",
+      "url": "https://civitai.com/models?type=LORA",
+      "description": "Browse community LoRAs and styles for anime, photorealism, 3D and niche aesthetics.",
+      "tags": [
+        "styles",
+        "lora",
+        "community",
+        "search"
+      ],
+      "type": "reference"
+    },
+    {
+      "id": "reddit-sd",
+      "category": "community",
+      "name": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/",
+      "description": "Active community for open image generation, workflows, news and troubleshooting.",
+      "tags": [
+        "community",
+        "stable-diffusion",
+        "news",
+        "workflows"
+      ],
+      "type": "community"
+    },
+    {
+      "id": "reddit-midjourney",
+      "category": "community",
+      "name": "r/midjourney",
+      "url": "https://www.reddit.com/r/midjourney/",
+      "description": "Midjourney showcase and discussion for prompts, styles and creative ideas.",
+      "tags": [
+        "community",
+        "midjourney",
+        "prompts",
+        "showcase"
+      ],
+      "type": "community"
+    },
+    {
+      "id": "reddit-aivideo",
+      "category": "community",
+      "name": "r/aivideo",
+      "url": "https://www.reddit.com/r/aivideo/",
+      "description": "Community focused on AI video generation, models, tools and techniques.",
+      "tags": [
+        "community",
+        "video",
+        "AI",
+        "discussion"
+      ],
+      "type": "community"
+    },
+    {
+      "id": "reddit-aiart",
+      "category": "community",
+      "name": "r/aiArt",
+      "url": "https://www.reddit.com/r/aiArt/",
+      "description": "General AI art community sharing images, styles and experiments.",
+      "tags": [
+        "community",
+        "art",
+        "AI",
+        "inspiration"
+      ],
+      "type": "community"
+    },
+    {
+      "id": "huggingface-community",
+      "category": "community",
+      "name": "Hugging Face Community",
+      "url": "https://huggingface.co/",
+      "description": "Model spaces, datasets, demos and community discussions for open AI creativity.",
+      "tags": [
+        "community",
+        "models",
+        "spaces",
+        "open-source"
+      ],
+      "type": "community"
+    }
+  ],
+  "styles": [
+    {
+      "name": "Cyberpunk",
+      "aliases": [
+        "neon noir",
+        "sci-fi city",
+        "dystopian future"
+      ],
+      "description": "Rain-slicked streets, neon signs, megacities, high-tech low-life."
+    },
+    {
+      "name": "Vaporwave",
+      "aliases": [
+        "synthwave",
+        "retro-futuristic"
+      ],
+      "description": "Pink/purple gradients, chrome, Greek statues, 80s mall aesthetics."
+    },
+    {
+      "name": "Minimalism",
+      "aliases": [
+        "minimal",
+        "less is more"
+      ],
+      "description": "Negative space, simple forms, one accent, restrained palette."
+    },
+    {
+      "name": "Bauhaus",
+      "aliases": [
+        "modernist",
+        "geometric"
+      ],
+      "description": "Primary colors, geometric shapes, rational grid, industrial design."
+    },
+    {
+      "name": "Swiss / International Typographic",
+      "aliases": [
+        "Swiss design",
+        "grid-based"
+      ],
+      "description": "Helvetica-like type, asymmetric grid, clean hierarchy and whitespace."
+    },
+    {
+      "name": "Art Deco",
+      "aliases": [
+        "gatsby",
+        "golden age"
+      ],
+      "description": "Geometric ornament, gold/black/ivory, symmetry, luxury 1920s glamour."
+    },
+    {
+      "name": "Art Nouveau",
+      "aliases": [
+        "fin de siècle"
+      ],
+      "description": "Organic curves, floral motifs, decorative borders, poster art."
+    },
+    {
+      "name": "Brutalism",
+      "aliases": [
+        "raw concrete",
+        "neo-brutalism"
+      ],
+      "description": "Raw material, heavy type, exposed structure, stark and unpolished."
+    },
+    {
+      "name": "Pop Art",
+      "aliases": [
+        "comic pop"
+      ],
+      "description": "Bold color, Ben-Day dots, consumer imagery, ironic repetition."
+    },
+    {
+      "name": "Surrealism",
+      "aliases": [
+        "dreamlike",
+        "melting"
+      ],
+      "description": "Impossible combinations, dreams, scale shifts, strange juxtaposition."
+    },
+    {
+      "name": "Anime",
+      "aliases": [
+        "manga",
+        "cel-shaded"
+      ],
+      "description": "Clean line art, cel shading, vivid colors, expressive eyes and motion."
+    },
+    {
+      "name": "Studio Ghibli style",
+      "aliases": [
+        "ghibli-inspired",
+        "hand-painted anime"
+      ],
+      "description": "Soft watercolor backgrounds, pastoral warmth, gentle light and whimsy."
+    },
+    {
+      "name": "Pixar / 3D animation",
+      "aliases": [
+        "3D render",
+        "toy-like"
+      ],
+      "description": "Stylized 3D characters, soft global illumination, expressive faces."
+    },
+    {
+      "name": "Clay 3D",
+      "aliases": [
+        "claymation",
+        "plasticine"
+      ],
+      "description": "Tactile sculpted look, fingerprint texture, soft studio lighting."
+    },
+    {
+      "name": "Isometric",
+      "aliases": [
+        "isometric 3D",
+        "game asset"
+      ],
+      "description": "Axonometric angles, clean vector-like 3D, used for maps and UI scenes."
+    },
+    {
+      "name": "Low poly",
+      "aliases": [
+        "polygon"
+      ],
+      "description": "Faceted geometric surfaces, simplified forms, game-art aesthetic."
+    },
+    {
+      "name": "Flat design",
+      "aliases": [
+        "vector flat"
+      ],
+      "description": "Simple shapes, solid colors, no gradients/shadows, icon-like clarity."
+    },
+    {
+      "name": "Glassmorphism",
+      "aliases": [
+        "glass UI",
+        "frosted glass"
+      ],
+      "description": "Translucent blurred glass panels, glowing borders, light reflections."
+    },
+    {
+      "name": "Neumorphism",
+      "aliases": [
+        "soft UI"
+      ],
+      "description": "Soft extruded shapes using light and shadow with low contrast."
+    },
+    {
+      "name": "Paper-cut",
+      "aliases": [
+        "papercraft",
+        "cutout"
+      ],
+      "description": "Layered paper shapes, sharp cut edges, depth shadows, playful."
+    },
+    {
+      "name": "Watercolor",
+      "aliases": [
+        "aquarelle"
+      ],
+      "description": "Translucent pigments, soft bleeds, paper texture, delicate hand feel."
+    },
+    {
+      "name": "Oil painting",
+      "aliases": [
+        "impasto",
+        "classic painting"
+      ],
+      "description": "Rich pigment, visible brushstrokes, heavy texture, traditional palette."
+    },
+    {
+      "name": "Charcoal",
+      "aliases": [
+        "sketch",
+        "graphite"
+      ],
+      "description": "Monochrome, expressive strokes, smudges, dramatic contrast."
+    },
+    {
+      "name": "Ukiyo-e",
+      "aliases": [
+        "Japanese woodblock"
+      ],
+      "description": "Flat color, woodblock prints, wave and mountain motifs, traditional Japanese style."
+    },
+    {
+      "name": "Pixel art",
+      "aliases": [
+        "8-bit",
+        "retro game"
+      ],
+      "description": "Visible pixels, limited palette, nostalgic video-game look."
+    },
+    {
+      "name": "Editorial fashion",
+      "aliases": [
+        "magazine cover",
+        "high fashion"
+      ],
+      "description": "Magazine composition, posed model, stylized wardrobe, dramatic retouching."
+    },
+    {
+      "name": "Street photography",
+      "aliases": [
+        "candid",
+        "documentary"
+      ],
+      "description": "Real life, natural light, decisive moments, urban texture."
+    },
+    {
+      "name": "Macro",
+      "aliases": [
+        "close-up detail",
+        "micro"
+      ],
+      "description": "Extreme magnification, shallow depth of field, intricate texture detail."
+    },
+    {
+      "name": "Product photography",
+      "aliases": [
+        "hero shot",
+        "commercial still"
+      ],
+      "description": "Studio lighting, clean background, precise materials and reflections."
+    },
+    {
+      "name": "Golden hour",
+      "aliases": [
+        "magic hour"
+      ],
+      "description": "Warm low sunlight, long shadows, soft glow, romantic atmosphere."
+    },
+    {
+      "name": "Blue hour",
+      "aliases": [
+        "twilight"
+      ],
+      "description": "Deep blue sky after sunset, city lights, moody gradient."
+    },
+    {
+      "name": "Teal & orange",
+      "aliases": [
+        "blockbuster color grade"
+      ],
+      "description": "Cinematic complementary color grade: cool shadows, warm highlights."
+    },
+    {
+      "name": "Chiaroscuro",
+      "aliases": [
+        "Rembrandt lighting"
+      ],
+      "description": "Strong contrast between light and dark, dramatic classical lighting."
+    },
+    {
+      "name": "Volumetric light",
+      "aliases": [
+        "god rays",
+        "light shafts"
+      ],
+      "description": "Visible light beams through haze, dust or fog, cinematic depth."
+    },
+    {
+      "name": "Film noir",
+      "aliases": [
+        "noir"
+      ],
+      "description": "Black-and-white or low-key lighting, shadows, crime, mystery mood."
+    },
+    {
+      "name": "Polaroid",
+      "aliases": [
+        "vintage instant"
+      ],
+      "description": "White border, faded colors, accidental flash, analog snapshot feel."
+    },
+    {
+      "name": "Kodachrome",
+      "aliases": [
+        "film grain",
+        "analog film"
+      ],
+      "description": "Warm vintage film stock, grain, saturated reds, 35mm nostalgia."
+    },
+    {
+      "name": "Collage",
+      "aliases": [
+        "cut-paste",
+        "mixed-media"
+      ],
+      "description": "Layered cutouts, textured paper, asymmetry, Dada/editorial style."
+    },
+    {
+      "name": "Retro futurism",
+      "aliases": [
+        "70s sci-fi",
+        "Cassette Futurism"
+      ],
+      "description": "Analog tech, CRT, beige plastic, optimistic vintage sci-fi."
+    }
+  ],
+  "craft": {
+    "lighting": [
+      "golden hour",
+      "blue hour",
+      "Rembrandt lighting",
+      "chiaroscuro",
+      "high-key",
+      "low-key",
+      "rim light",
+      "softbox",
+      "neon glow",
+      "volumetric light",
+      "practical lights",
+      "backlight",
+      "window light",
+      "candlelight",
+      "film noir shadows"
+    ],
+    "camera": [
+      "extreme close-up",
+      "close-up",
+      "medium shot",
+      "wide shot",
+      "establishing shot",
+      "POV",
+      "over-the-shoulder",
+      "dolly in",
+      "dolly out",
+      "crane shot",
+      "pan",
+      "tilt",
+      "tracking shot",
+      "handheld",
+      "drone aerials",
+      "gimbal",
+      "slow motion",
+      "24fps",
+      "shallow depth of field"
+    ],
+    "composition": [
+      "rule of thirds",
+      "golden ratio",
+      "symmetry",
+      "leading lines",
+      "negative space",
+      "layering",
+      "depth of field",
+      "framing",
+      "architectural",
+      "macro",
+      "minimal composition",
+      "dynamic angle",
+      "low angle",
+      "high angle"
+    ],
+    "color": [
+      "teal & orange",
+      "pastel",
+      "monochrome",
+      "warm amber",
+      "cool cyan",
+      "saturated",
+      "muted",
+      "film grain",
+      "Kodachrome",
+      "black & white",
+      "duotone",
+      "vaporwave pink",
+      "cinematic grade"
+    ]
+  }
+}
