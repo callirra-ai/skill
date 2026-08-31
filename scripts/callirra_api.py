@@ -98,6 +98,16 @@ def run_generate_image(args: argparse.Namespace) -> None:
         print(json.dumps(result, indent=2))
 
 
+def download_video(job_id: str, out_path: str) -> None:
+    api_key = load_key()
+    req = urllib.request.Request(
+        f"{API_BASE}/v1/videos/{job_id}/content",
+        headers={"Authorization": f"Bearer {api_key}"},
+    )
+    with urllib.request.urlopen(req, timeout=120) as res:
+        Path(out_path).write_bytes(res.read())
+
+
 def run_generate_video(args: argparse.Namespace) -> None:
     body = {"model": args.model, "prompt": args.prompt}
     if args.duration:
@@ -117,6 +127,9 @@ def run_generate_video(args: argparse.Namespace) -> None:
             state = request(f"/v1/videos/{job['id']}")["job"]
             if state["status"] in ("completed", "failed", "cancelled", "expired"):
                 print(json.dumps(state, indent=2))
+                if args.out and state["status"] == "completed":
+                    download_video(job["id"], args.out)
+                    print(f"Saved video to {args.out}")
                 break
             time.sleep(5)
 
@@ -155,8 +168,11 @@ def run_enhance(args: argparse.Namespace) -> None:
     print(json.dumps(result, indent=2))
 
 
-def run_creative() -> None:
+def run_creative(args: argparse.Namespace) -> None:
     data = request("/api/v1/creative")
+    if args.full:
+        print(json.dumps(data, indent=2))
+        return
     print(f"version: {data.get('version')}")
     print(f"categories: {len(data.get('categories', []))}")
     print(f"resources: {len(data.get('resources', []))}")
@@ -194,6 +210,7 @@ def main() -> None:
     p.add_argument("--mode")
     p.add_argument("--aspect")
     p.add_argument("--generate-audio", action="store_true")
+    p.add_argument("--out")
     p.add_argument("--wait", action="store_true")
     p.set_defaults(func=run_generate_video)
 
@@ -219,7 +236,9 @@ def main() -> None:
     p.add_argument("--language", choices=["zh", "en"])
     p.set_defaults(func=run_enhance)
 
-    sub.add_parser("creative").set_defaults(func=lambda a: run_creative())
+    p = sub.add_parser("creative")
+    p.add_argument("--full", action="store_true")
+    p.set_defaults(func=run_creative)
 
     args = parser.parse_args()
     args.func(args)
