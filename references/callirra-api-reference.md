@@ -28,7 +28,7 @@ curl https://api.callirra.com/v1/images/generations \
   -H "Authorization: Bearer sk-cal-..." \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "nano-banana",
+    "model": "nano-banana-2",
     "prompt": "A cinematic product hero shot",
     "size": "1024x1024",
     "n": 1
@@ -53,9 +53,20 @@ curl -X POST https://api.callirra.com/v1/videos \
 
 | Model | Type |
 |---|---|
-| `nano-banana` | Image |
+| `nano-banana-2` | Image |
 | `gpt-image-2` | Image |
 | `seedream-5-pro` | Image |
+| `z-image` | Image |
+| `grok-imagine-image-2` | Image |
 | `seedance-2.5` | Video |
+| `seedance-2.0` | Video |
 | `kling-3.0` | Video |
 | `minimax-h3` | Video |
+| `veo-3.1-fast` | Video |
+| `gemini-omni-video` | Video |
+
+## Notes
+
+- All image/video generation requests are content-moderated before and after generation.
+- Do not attempt to generate NSFW, deepfakes, hate speech, child-unsafe content, or copyright-infringing material.
+- Failed/cancelled video tasks automatically refund reserved credits.

@@ -7,7 +7,7 @@ Generate a consistent set of images for an SEO article or landing page.
 3. Generate a cover image:
    ```bash
    python3 scripts/callirra_api.py generate-image \
-     --model nano-banana \
+     --model nano-banana-2 \
      --prompt "<cover prompt>" \
      --size 1024x1024 \
      --out ./cover.png

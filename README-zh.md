@@ -1,6 +1,6 @@
 # Callirra 媒体生成 Skill
 
-一个开源的 AI Agent 技能包，让 Claude Code、Codex、Cursor 等 Agent 可以直接调用 Callirra 生成图像和视频。
+开源 AI Agent 技能包，让 Claude Code、Codex、Cursor 等 Agent 可以直接调用 Callirra 生成图像和视频。
 
 ## 环境要求
 
@@ -19,7 +19,7 @@ npx skills add callirra-ai/skill --all
 python3 scripts/callirra_api.py setup-api-key "<你的-API-Key>"
 ```
 
-在 [callirra.com](https://callirra.com?utm_source=github-skill) 获取免费 API Key。
+在 [callirra.com](https://callirra.com?utm_source=github-skill) 获取 API Key。
 
 ## 命令
 
@@ -44,7 +44,7 @@ python3 scripts/callirra_api.py creative --full
 
 # 生成
 python3 scripts/callirra_api.py generate-image \
-  --model nano-banana \
+  --model nano-banana-2 \
   --prompt "电影感产品图" \
   --size 1024x1024 \
   --out hero.png
@@ -79,4 +79,4 @@ MIT. 源码：[github.com/callirra-ai/skill](https://github.com/callirra-ai/skil
 
 ---
 
-→ 在 [callirra.com](https://callirra.com?utm_source=github-skill) 免费开始
+在 [callirra.com](https://callirra.com?utm_source=github-skill) 免费开始。

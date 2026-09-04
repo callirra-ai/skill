@@ -48,7 +48,7 @@ python3 scripts/callirra_api.py creative --full
 
 # Generate
 python3 scripts/callirra_api.py generate-image \
-  --model nano-banana \
+  --model nano-banana-2 \
   --prompt "A cinematic hero shot" \
   --size 1024x1024 \
   --out hero.png
@@ -83,4 +83,4 @@ MIT. Source: [github.com/callirra-ai/skill](https://github.com/callirra-ai/skill
 
 ---
 
-→ Start free at [callirra.com](https://callirra.com?utm_source=github-skill)
+Start free at [callirra.com](https://callirra.com?utm_source=github-skill)

@@ -15,7 +15,7 @@
 6. Generate:
    ```bash
    python3 scripts/callirra_api.py generate-image \
-     --model nano-banana \
+     --model nano-banana-2 \
      --prompt "<enhanced prompt>" \
      --size 1024x1024 \
      --out ./output.png

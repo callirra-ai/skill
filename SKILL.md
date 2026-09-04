@@ -48,7 +48,7 @@ python3 scripts/callirra_api.py usage --limit 10
 
 # Generate an image
 python3 scripts/callirra_api.py generate-image \
-  --model nano-banana \
+  --model nano-banana-2 \
   --prompt "A cinematic product hero shot" \
   --size 1024x1024 \
   --out hero.png
