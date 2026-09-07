@@ -91,6 +91,10 @@ def run_generate_image(args: argparse.Namespace) -> None:
         body["reference_images"] = [x.strip() for x in args.reference.split(",") if x.strip()]
     if args.image_input:
         body["image_input"] = args.image_input
+    if args.nsfw_checker:
+        body["nsfw_checker"] = True
+    if args.google_search:
+        body["google_search"] = True
     result = request("/v1/images/generations", "POST", body)
     images = result.get("data", [])
     urls = [img.get("url") for img in images if img.get("url")]
@@ -101,6 +105,17 @@ def run_generate_image(args: argparse.Namespace) -> None:
         out.write_bytes(base64.b64decode(first["b64_json"]))
         print(f"Saved image to {args.out}")
         for url in urls:
+            print(url)
+    elif args.out and urls:
+        # The live API returns signed URLs (no b64) — fetch so --out always
+        # writes a file as advertised.
+        out = Path(args.out)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        req = urllib.request.Request(urls[0])
+        with urllib.request.urlopen(req, timeout=120) as res:
+            out.write_bytes(res.read())
+        print(f"Saved image to {args.out}")
+        for url in urls[1:]:
             print(url)
     elif urls:
         for url in urls:
@@ -137,6 +152,34 @@ def run_generate_video(args: argparse.Namespace) -> None:
         body["frame_images"] = [x.strip() for x in args.frame_image.split(",") if x.strip()]
     if args.input_reference:
         body["input_references"] = [x.strip() for x in args.input_reference.split(",") if x.strip()]
+    if args.input_images:
+        body["input_images"] = [x.strip() for x in args.input_images.split(",") if x.strip()]
+    if args.input_videos:
+        body["input_videos"] = [x.strip() for x in args.input_videos.split(",") if x.strip()]
+    if args.audio_input:
+        body["audio_input"] = [x.strip() for x in args.audio_input.split(",") if x.strip()]
+    if args.seed is not None:
+        body["seed"] = args.seed
+    if args.seedance_mode:
+        body["seedance_mode"] = args.seedance_mode
+    if args.kling_mode:
+        body["kling_mode"] = args.kling_mode
+    if args.kling_orientation:
+        body["kling_orientation"] = args.kling_orientation
+    if args.background_source:
+        body["background_source"] = args.background_source
+    if args.output_format:
+        body["output_format"] = args.output_format
+    if args.audio_setting:
+        body["audio_setting"] = args.audio_setting
+    if args.return_last_frame is not None:
+        body["return_last_frame"] = bool(args.return_last_frame)
+    if args.camera_fixed is not None:
+        body["camera_fixed"] = bool(args.camera_fixed)
+    if args.nsfw_checker is not None:
+        body["nsfw_checker"] = bool(args.nsfw_checker)
+    if args.google_search is not None:
+        body["google_search"] = bool(args.google_search)
     job = request("/v1/videos", "POST", body)["job"]
     print(f"Job created: {job['id']} ({job['status']})")
     if args.wait:
@@ -155,6 +198,8 @@ def run_generate_video(args: argparse.Namespace) -> None:
             if time.time() - started > 900:
                 raise SystemExit("Task timed out after 900s.")
             time.sleep(5)
+    elif not args.wait and args.out:
+        print("--out only applies together with --wait.")
 
 
 def run_task(task_id: str) -> None:
@@ -224,6 +269,8 @@ def main() -> None:
     p.add_argument("--n", type=int)
     p.add_argument("--reference")
     p.add_argument("--image-input")
+    p.add_argument("--nsfw-checker", action="store_true")
+    p.add_argument("--google-search", action="store_true")
     p.add_argument("--out")
     p.set_defaults(func=run_generate_image)
 
@@ -237,6 +284,20 @@ def main() -> None:
     p.add_argument("--generate-audio", action="store_true")
     p.add_argument("--frame-image")
     p.add_argument("--input-reference")
+    p.add_argument("--input-images")
+    p.add_argument("--input-videos")
+    p.add_argument("--audio-input")
+    p.add_argument("--seed", type=int)
+    p.add_argument("--seedance-mode")
+    p.add_argument("--kling-mode")
+    p.add_argument("--kling-orientation")
+    p.add_argument("--background-source")
+    p.add_argument("--output-format")
+    p.add_argument("--audio-setting")
+    p.add_argument("--return-last-frame", action="store_true")
+    p.add_argument("--camera-fixed", action="store_true")
+    p.add_argument("--nsfw-checker", action="store_true")
+    p.add_argument("--google-search", action="store_true")
     p.add_argument("--out")
     p.add_argument("--wait", action="store_true")
     p.set_defaults(func=run_generate_video)
