@@ -1,5 +1,9 @@
 # Callirra Media Generator Skill
 
+[![skill](https://img.shields.io/badge/skills.sh-installable-1f9c6b?style=flat-square)](#install)
+[![python](https://img.shields.io/badge/python-3.10%2B-0969da?style=flat-square)](#requirements)
+[![license](https://img.shields.io/badge/license-MIT-555555?style=flat-square)](#license)
+
 An open-source AI agent skill for generating and monitoring Callirra image and video tasks.
 
 Works with Claude Code, Codex, Cursor and other skill-enabled AI coding platforms.
@@ -35,7 +39,7 @@ python3 scripts/callirra_api.py usage --limit 10
 # Models
 python3 scripts/callirra_api.py models
 
-# Prompt Studio
+# Templates & knowledge
 python3 scripts/callirra_api.py templates
 python3 scripts/callirra_api.py enhance \
   --template-id cinematic-city \
@@ -74,8 +78,13 @@ python3 scripts/callirra_api.py upload --file ./frame.png --content-type image/p
 - `SKILL.md` — main skill instructions
 - `scripts/callirra_api.py` — zero-dependency Python CLI
 - `references/callirra-api-reference.md` — API reference
-- `references/creative-knowledge.json` — full curated creative knowledge base (110 resources, 8 categories, 39 styles)
+- `references/creative-knowledge.json` — full curated creative knowledge base (110 resources, 8 categories, 39 styles, 61 cinematography terms)
 - `workflows/` — reusable recipe workflows
+
+## Related
+
+- [GPT Image 2.5 Prompt Atlas](https://github.com/callirra-ai/gpt-image-2-5-prompt-atlas) — 50 prompts, each shipped with the exact frame it produced, plus a measured Flare-vs-Sunburst comparison
+- [CLI](https://github.com/callirra-ai/cli?utm_source=github-skill) · [MCP server](https://github.com/callirra-ai/mcp?utm_source=github-skill) — the same catalogue for terminals and MCP-compatible agents
 
 ## License
 
