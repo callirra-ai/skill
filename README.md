@@ -6,6 +6,11 @@
 
 An open-source AI agent skill for generating and monitoring Callirra image and video tasks.
 
+<img src="images/skill.png" width="100%" alt="Installing the skill and running the Python helper: creative knowledge summary and an image generation.">
+
+<img src="images/gallery.jpg" width="100%" alt="Three frames produced with the models the skill can call: a silhouette universe poster, a citrus soda product shot and an isometric bookshop cutaway.">
+
+
 Works with Claude Code, Codex, Cursor and other skill-enabled AI coding platforms.
 
 ## Requirements
