@@ -1,5 +1,9 @@
 # Image Generation Workflow
 
+> ⚠️ **The built-in template catalogue was retired (Sep 2026)**: `PROMPT_TEMPLATES` is now an empty array,
+> `GET /api/v1/prompts/templates` returns an empty list, and any `templateId` call returns 404. References to
+> built-in templates or `--template-id` below are historical — use the prompt box or `prompts/enhance` instead.
+
 1. Ask the user for the visual goal or prompt.
 2. Run `python3 scripts/callirra_api.py creative` to load curated style and resource knowledge.
 3. If the user wants a professional prompt, list templates and enhance:
@@ -15,7 +19,7 @@
 6. Generate:
    ```bash
    python3 scripts/callirra_api.py generate-image \
-     --model nano-banana \
+     --model nano-banana-2 \
      --prompt "<enhanced prompt>" \
      --size 1024x1024 \
      --out ./output.png

@@ -7,6 +7,10 @@ description: Generate and monitor Callirra image and video tasks end-to-end. Use
 
 ## Overview
 
+> ⚠️ **The built-in template catalogue was retired (Sep 2026)**: `PROMPT_TEMPLATES` is now an empty array,
+> `GET /api/v1/prompts/templates` returns an empty list, and any `templateId` call returns 404. References to
+> built-in templates or `--template-id` below are historical — use the prompt box or `prompts/enhance` instead.
+
 Use this skill to call Callirra APIs reliably, create image and video generation tasks, and return final media results with credit-aware behavior.
 
 Callirra is an OpenAI-compatible AI media gateway. It supports top image and video models through one API key (`sk-cal-...`).
@@ -48,7 +52,7 @@ python3 scripts/callirra_api.py usage --limit 10
 
 # Generate an image
 python3 scripts/callirra_api.py generate-image \
-  --model nano-banana \
+  --model nano-banana-2 \
   --prompt "A cinematic product hero shot" \
   --size 1024x1024 \
   --out hero.png
