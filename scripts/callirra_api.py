@@ -18,6 +18,10 @@ API_BASE = os.environ.get("CALLIRRA_API_BASE", "https://api.callirra.com").rstri
 KEY_PREFIX = "sk-cal-"
 CONFIG_FILE = Path.home() / ".config" / "callirra" / "api_key"
 
+# Every request identifies itself explicitly. urllib would otherwise send `Python-urllib/3.x`, which the API's
+# edge bans (Cloudflare 403 / error 1010) — see the note in `request()`.
+USER_AGENT = os.environ.get("CALLIRRA_USER_AGENT", "callirra-skill/1.0 (+https://github.com/callirra-ai/skill)")
+
 
 def save_key(key: str) -> Path:
     CONFIG_FILE.parent.mkdir(parents=True, exist_ok=True)
@@ -46,6 +50,12 @@ def request(path: str, method: str = "GET", body: dict | None = None, key: str |
         headers={
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
+            # urllib's default User-Agent is `Python-urllib/3.x`, and Cloudflare answers that signature
+            # with **403 error code: 1010** before the request ever reaches the API — measured 2026-09-22:
+            # Python-urllib → 403, python-requests/curl/Mozilla → 401 (i.e. they get through to auth).
+            # Every command below therefore failed for every user until this header was set. Do not remove
+            # it, and do not replace it with anything a bot rule is likely to ban.
+            "User-Agent": USER_AGENT,
         },
     )
     try:
@@ -111,7 +121,9 @@ def run_generate_image(args: argparse.Namespace) -> None:
         # writes a file as advertised.
         out = Path(args.out)
         out.parent.mkdir(parents=True, exist_ok=True)
-        req = urllib.request.Request(urls[0])
+        # The signed URL lives on the API's own host, behind the same edge that bans urllib's default
+        # User-Agent — without this header the download (not the generation) fails with 403/1010.
+        req = urllib.request.Request(urls[0], headers={"User-Agent": USER_AGENT})
         with urllib.request.urlopen(req, timeout=120) as res:
             out.write_bytes(res.read())
         print(f"Saved image to {args.out}")
@@ -128,7 +140,7 @@ def download_video(job_id: str, out_path: str) -> None:
     api_key = load_key()
     req = urllib.request.Request(
         f"{API_BASE}/v1/videos/{job_id}/content",
-        headers={"Authorization": f"Bearer {api_key}"},
+        headers={"Authorization": f"Bearer {api_key}", "User-Agent": USER_AGENT},
     )
     with urllib.request.urlopen(req, timeout=120) as res:
         out = Path(out_path)
