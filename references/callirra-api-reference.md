@@ -21,10 +21,10 @@ Auth split: **`/v1/*`** = API-key endpoints (OpenAI-compatible; use your `sk-cal
 | POST | `/v1/videos/{id}/cancel` | Cancel task |
 | POST | `/v1/media/references/upload` | Upload reference media (multipart, field `file`; image ≤20MB, audio ≤15MB, video ≤100MB) |
 | POST | `/v1/media/references` | Upload reference media (base64 JSON, ≤~6MB binary) |
-| GET | `/api/v1/prompts/templates` | ⚠️ retired — answers an empty list; use the bundled recipe snapshot instead |
-| POST | `/v1/prompts/enhance` | ⚠️ retired with the template catalogue: it needs a `templateId` that no longer exists |
-| GET | `/api/v1/creative` | Get full curated creative knowledge base (session) |
-| POST | `/v1/templates/generate` | Prompt Studio one-click generation (idea → enhanced prompt → job; supports `scene: storyboard`) |
+| GET | `/api/v1/prompts/templates` | ⚠️ retired — answers an empty list; use the bundled recipe snapshot (`recipes`, `recipe <slug>`, `scenes`) instead |
+| POST | `/v1/prompts/enhance` | ⚠️ retired with the template catalogue: it needs a `templateId` that no longer exists, so it answers 404 |
+| GET | `/api/v1/creative` | Get full curated creative knowledge base (public route; the skill script still needs a key configured before it will call anything) |
+| POST | `/v1/templates/generate` | ⚠️ retired — the one-click entry point over an empty catalogue, so no template can be selected |
 
 ## Image Example
 

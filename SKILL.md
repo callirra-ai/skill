@@ -7,9 +7,15 @@ description: Generate and monitor Callirra image and video tasks end-to-end. Use
 
 ## Overview
 
-> ⚠️ **The built-in template catalogue was retired (Sep 2026)**: `PROMPT_TEMPLATES` is now an empty array,
-> `GET /api/v1/prompts/templates` returns an empty list, and any `templateId` call returns 404. References to
-> built-in templates or `--template-id` below are historical — use the prompt box or `prompts/enhance` instead.
+> ⚠️ **The built-in template catalogue and the `enhance` flow were retired (Sep 2026) and are not coming back.**
+> `PROMPT_TEMPLATES` is an empty array, `GET /api/v1/prompts/templates` answers an empty list, and
+> `POST /v1/prompts/enhance` requires a `templateId` that no longer exists — it answers 404. There is no
+> `templates` and no `enhance` sub-command; the same goes for the one-click `/v1/templates/generate` entry.
+>
+> **Use the bundled recipe library instead** — it ships with this skill, needs no API key and no network:
+> `recipes` lists 172 curated recipes, `recipe <slug>` prints one in full (prompt, settings, credits, deep
+> link), and `scenes` covers the six worked Seedance 2.5 scenes. These prompts are video-oriented; for
+> **image** prompts use an Image Prompts Studio template from the website and paste it into `--prompt`.
 
 Use this skill to call Callirra APIs reliably, create image and video generation tasks, and return final media results with credit-aware behavior.
 
@@ -34,7 +40,7 @@ The script stores the key at `~/.config/callirra/api_key`.
 ## Standard Flow
 
 1. Discover available models and creative knowledge.
-2. If the user wants a professional prompt, list Prompt Studio templates and run `enhance`.
+2. If the user wants a professional prompt, start from the bundled recipe library (`recipes`, `recipe <slug>`, `scenes`) — it ships with the skill and needs no key.
 3. Upload reference images when the task needs local image inputs.
 4. Create an image or video task.
 5. Poll task status until final state.
@@ -73,14 +79,14 @@ python3 scripts/callirra_api.py cancel <TASK_ID>
 # Upload a reference image
 python3 scripts/callirra_api.py upload --file ./frame.png --content-type image/png
 
-# Prompt Studio templates
-python3 scripts/callirra_api.py templates
+# Curated prompt library (bundled with the skill — offline, no key needed)
+python3 scripts/callirra_api.py recipes
+python3 scripts/callirra_api.py recipes --category cinematic --limit 40
+python3 scripts/callirra_api.py recipe bridge-pursuit-headlights
 
-# Enhance an idea into a professional prompt
-python3 scripts/callirra_api.py enhance \
-  --template-id cinematic-city \
-  --idea "雨夜的东京街头，一个人撑伞走过" \
-  --kind video
+# The six worked Seedance 2.5 scenes (prompt, settings, credits, and what a filtered route refuses)
+python3 scripts/callirra_api.py scenes
+python3 scripts/callirra_api.py scenes wedding
 
 # Creative knowledge base (models, styles, resources)
 python3 scripts/callirra_api.py creative

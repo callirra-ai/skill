@@ -9,8 +9,11 @@
 
 ## 安装
 
-> ⚠️ **内置模板目录已下线（2026-09）**：`PROMPT_TEMPLATES` 现为空数组，`GET /api/v1/prompts/templates` 返回空列表，
-> 带 `templateId` 的调用会 404。下面提到"内置模板 / `--template-id`"的用法属于历史，请改用提示词框或 `prompts/enhance`。
+> ⚠️ **内置模板目录与 `enhance`（一句话扩写）已下线（2026-09），不再恢复**：`PROMPT_TEMPLATES` 现为空数组，
+> `GET /api/v1/prompts/templates` 返回空列表，`POST /v1/prompts/enhance` 依赖的 `templateId` 已不存在（404）。
+>
+> **替代方案是随 skill 一起分发的配方库**（离线、不需要 key）：`recipes` 列出 172 条配方、`recipe <slug>` 打印
+> 完整提示词与参数、`scenes` 是 6 个实测场景。这些偏视频；**图片**提示词请用网站的 Image Prompts Studio 模板。
 
 ```bash
 npx skills add callirra-ai/skill --all
@@ -34,12 +37,11 @@ python3 scripts/callirra_api.py usage --limit 10
 # 模型
 python3 scripts/callirra_api.py models
 
-# Prompt Studio
-python3 scripts/callirra_api.py templates
-python3 scripts/callirra_api.py enhance \
-  --template-id cinematic-city \
-  --idea "雨夜东京街头" \
-  --kind video
+# 提示词库（随 skill 分发，离线可用、不需要 key）
+python3 scripts/callirra_api.py recipes
+python3 scripts/callirra_api.py recipe bridge-pursuit-headlights
+python3 scripts/callirra_api.py scenes
+python3 scripts/callirra_api.py scenes wedding
 
 # 创意知识库（加 --full 输出完整 JSON）
 python3 scripts/callirra_api.py creative

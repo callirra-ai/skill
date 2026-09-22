@@ -1,6 +1,8 @@
 # Curated Prompt Library
 
-Use these as starting points. Enhance them with `enhance` or paste directly into `generate-image` / `generate-video`.
+Use these as starting points, and paste them directly into `generate-image` / `generate-video`. For a larger,
+measured set pull one by slug with `recipe <slug>` (172 recipes, offline) or run `scenes <slug>` for the six
+worked Seedance 2.5 scenes; the `enhance` command was retired with the built-in template catalogue.
 
 ## Image
 

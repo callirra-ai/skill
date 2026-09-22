@@ -1,8 +1,10 @@
 # Callirra Media Generator Skill
 
-> ⚠️ **The built-in template catalogue was retired (Sep 2026)**: `PROMPT_TEMPLATES` is now an empty array,
-> `GET /api/v1/prompts/templates` returns an empty list, and any `templateId` call returns 404. References to
-> built-in templates or `--template-id` below are historical — use the prompt box or `prompts/enhance` instead.
+> ⚠️ **The built-in template catalogue and the `enhance` flow were retired (Sep 2026) and are not coming back.**
+> `PROMPT_TEMPLATES` is an empty array, `GET /api/v1/prompts/templates` answers an empty list, and
+> `POST /v1/prompts/enhance` needs a `templateId` that no longer exists — it answers 404.
+>
+> **The bundled recipe library replaces them** — offline, no key: `recipes`, `recipe <slug>`, `scenes`.
 
 [![skill](https://img.shields.io/badge/skills.sh-installable-1f9c6b?style=flat-square)](#install)
 [![python](https://img.shields.io/badge/python-3.10%2B-0969da?style=flat-square)](#requirements)
@@ -48,12 +50,11 @@ python3 scripts/callirra_api.py usage --limit 10
 # Models
 python3 scripts/callirra_api.py models
 
-# Templates & knowledge
-python3 scripts/callirra_api.py templates
-python3 scripts/callirra_api.py enhance \
-  --template-id cinematic-city \
-  --idea "A rainy Tokyo street at night" \
-  --kind video
+# Prompt library (bundled with the skill — offline, no key needed)
+python3 scripts/callirra_api.py recipes
+python3 scripts/callirra_api.py recipe bridge-pursuit-headlights
+python3 scripts/callirra_api.py scenes
+python3 scripts/callirra_api.py scenes wedding
 
 # Creative knowledge (add --full to print the whole JSON)
 python3 scripts/callirra_api.py creative
